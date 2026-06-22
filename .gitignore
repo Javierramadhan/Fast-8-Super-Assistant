@@ -1,4 +1,6 @@
 .env
 CLAUDE.local.md
 .claude/settings.local.json
+.claude/settings.local.backup.json
+.mcp.json
 node_modules/
