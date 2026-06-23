@@ -1,0 +1,10 @@
+[MCP server] Invalid tool arguments: [
+  {
+    "validation": "regex",
+    "code": "invalid_string",
+    "message": "Node ID must be in the format \"123:456\" or \"123-456\"",
+    "path": [
+      "nodeId"
+    ]
+  }
+]

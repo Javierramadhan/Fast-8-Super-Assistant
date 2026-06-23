@@ -37,7 +37,9 @@ You are Javier Ramadhan's executive assistant and design co-pilot at Fast-8 Grou
 
 ## Skills
 Skills live in `.claude/skills/`. Each skill is a folder with a `SKILL.md` file.
-Currently empty — built organically as recurring workflows are identified.
+
+### Active Skills ✅
+- **qa-landingpage-design** — QA production landing pages vs Figma (desktop + mobile), generates Word report
 
 ### Skills to Build (Backlog) 📋
 Based on Javier's most time-consuming tasks:

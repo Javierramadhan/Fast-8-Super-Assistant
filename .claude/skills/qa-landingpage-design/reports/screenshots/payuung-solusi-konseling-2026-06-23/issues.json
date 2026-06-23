@@ -1,0 +1,80 @@
+{
+  "product": "Payuung — Solusi Konseling Karyawan",
+  "url": "https://sandbox.payuung.com/benefit-karyawan/solusi-konseling-karyawan",
+  "date": "2026-06-23",
+  "qa_by": "Javier Ramadhan",
+  "figma_desktop_url": "https://www.figma.com/design/59cO4ZNEXrFh7H3q9bNzpm/Payuung---Website?node-id=22681-13816",
+  "figma_mobile_url": "https://www.figma.com/design/59cO4ZNEXrFh7H3q9bNzpm/Payuung---Website?node-id=22856-13766",
+  "issues": [
+    {
+      "id": 1,
+      "category": "content",
+      "severity": "major",
+      "viewport": "both",
+      "title": "Hero button — \"AKtifkan\" (huruf K kapital di tengah kata)",
+      "location": "Hero section / CTA button pertama",
+      "production_screenshot": "desktop_1440.png",
+      "production_crop": [0, 88, 1440, 730],
+      "figma_screenshot": "figma_s1_hero.png",
+      "figma_crop": [0, 0, 1024, 434],
+      "problem": "Figma desktop dan mobile hero menampilkan 'AKtifkan Layanan Sekarang' dengan huruf K kapital di tengah kata. Inkonsisten dengan CTA section (bawah halaman) yang sudah benar: 'Aktifkan Layanan Sekarang'.",
+      "should_be": "'Aktifkan Layanan Sekarang' — hanya huruf A di awal yang kapital"
+    },
+    {
+      "id": 2,
+      "category": "content",
+      "severity": "major",
+      "viewport": "mobile",
+      "title": "Counselor section — judul berbeda antara desktop dan mobile",
+      "location": "Section 'Profesional Berpengalaman' / heading utama",
+      "production_screenshot": "mobile_375.png",
+      "production_crop": [0, 5940, 390, 960],
+      "figma_screenshot": "figma_m7_counselor.png",
+      "figma_crop": [0, 0, 390, 1018],
+      "problem": "Figma mobile menampilkan heading 'Dengan Layanan Ini, Anda Dapat' — berbeda sepenuhnya dengan Figma desktop yang menampilkan 'Didukung oleh Profesional Berpengalaman'. Ini adalah section yang sama dengan konten yang sama (konselor profesional, pendekatan praktis, privat).",
+      "should_be": "Judul harus konsisten antara desktop dan mobile. Gunakan 'Didukung oleh Profesional Berpengalaman' sesuai desktop."
+    },
+    {
+      "id": 3,
+      "category": "content",
+      "severity": "major",
+      "viewport": "mobile",
+      "title": "Kapan Perusahaan Membutuhkan Ini — body text item 2 & 3 tertukar di mobile Figma",
+      "location": "Section checklist / item 'Stres & burnout meningkat' dan 'Banyak masalah finansial'",
+      "production_screenshot": "mobile_375.png",
+      "production_crop": [0, 2700, 390, 860],
+      "figma_screenshot": "figma_m4_checklist.png",
+      "figma_crop": [0, 0, 390, 904],
+      "problem": "Di Figma mobile, body text untuk item 2 ('Stres & burnout meningkat') berisi 'Tekanan keuangan yang berimbas pada konsentrasi kerja.' yang seharusnya milik item 3 ('Banyak masalah finansial'). Begitu pula sebaliknya — kedua deskripsi tertukar posisinya. Figma desktop sudah benar.",
+      "should_be": "'Stres & burnout meningkat' → 'Pola kerja yang berat tanpa ruang pemulihan.' | 'Banyak masalah finansial' → 'Tekanan keuangan yang berimbas pada konsentrasi kerja.'"
+    },
+    {
+      "id": 4,
+      "category": "content",
+      "severity": "minor",
+      "viewport": "mobile",
+      "title": "Counselor section — subtitle mobile tidak ada di desktop",
+      "location": "Section 'Profesional Berpengalaman' / subtitle paragraph",
+      "production_screenshot": "mobile_375.png",
+      "production_crop": [0, 5940, 390, 960],
+      "figma_screenshot": "figma_m7_counselor.png",
+      "figma_crop": [0, 0, 390, 1018],
+      "problem": "Figma mobile memiliki subtitle tambahan: 'Kami percaya bahwa dukungan yang baik berawal dari orang yang tepat — dengan kompetensi, empati, dan komitmen menjaga kepercayaan setiap karyawan'. Subtitle ini tidak ada di Figma desktop untuk section yang sama.",
+      "should_be": "Jika heading diperbaiki ke 'Didukung oleh Profesional Berpengalaman', subtitle ini perlu dihapus atau disesuaikan agar konsisten dengan desktop."
+    },
+    {
+      "id": 5,
+      "category": "content",
+      "severity": "minor",
+      "viewport": "mobile",
+      "title": "Features section — subtitle mobile terpotong (kata 'bertind')",
+      "location": "Section 'Dukungan Profesional untuk Kesehatan Mental' / subtitle",
+      "production_screenshot": "mobile_375.png",
+      "production_crop": [0, 1745, 390, 960],
+      "figma_screenshot": "figma_m3_features.png",
+      "figma_crop": [0, 0, 390, 1018],
+      "problem": "Figma mobile menampilkan subtitle yang terpotong: '...melihat lebih jelas dan bertind' — kata 'bertindak' tidak lengkap karena text box overflow di Figma. Selain itu, subtitle ini tidak ada di Figma desktop (desktop langsung ke 3 feature cards).",
+      "should_be": "Lengkapi teks atau sesuaikan ukuran text box di Figma. Jika subtitle tidak diperlukan di mobile, hapus untuk konsistensi dengan desktop."
+    }
+  ]
+}
