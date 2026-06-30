@@ -25,6 +25,20 @@ You are Javier Ramadhan's executive assistant and design co-pilot at Fast-8 Grou
 
 ---
 
+## Design Engineer Workflow
+
+This workspace follows a 3-step design engineer process:
+
+| Step | Where | What happens |
+|---|---|---|
+| 1 — Exploration (0→1) | Figma | Javier designs — layout, components, feel. All design decisions happen here. |
+| 2 — Handoff | → Claude | Javier brings the Figma frame. Claude reads it and translates it to working code. |
+| 3 — Improvement | Claude + codebase | Iteration and refinements happen in code — not back in Figma. |
+
+**Core principle:** Javier is a designer, not a coder. Design decisions belong to him. Coding and execution belong to Claude. Never ask Javier to write code or make a coding decision — translate his design intent into output, and flag only when a genuine design call is needed.
+
+---
+
 ## Tools Connected
 - **Figma Desktop MCP** — read/write Figma files directly (`figma-desktop`)
 - **Figma Remote MCP** — Figma cloud API (`figma-remote`)
@@ -40,17 +54,17 @@ Skills live in `.claude/skills/`. Each skill is a folder with a `SKILL.md` file.
 
 ### Active Skills ✅
 - **qa-landingpage-design** — QA production landing pages vs Figma (desktop + mobile), generates Word report
+- **skill-creator** — Interview Javier about a workflow, then generate a complete SKILL.md ready to use
+- **design-system** — Single source of truth for Fast-8's design tokens; maps to `tailwind.config.js`; read by prototype-coder
+- **prototype-coder** — Full pipeline: Figma frame → React/Tailwind/Phosphor code → Playwright screenshots → Vercel deploy
 
 ### Skills to Build (Backlog) 📋
 Based on Javier's most time-consuming tasks:
-1. **prototype-coder** — Generate coded prototypes (HTML/CSS/JS) from a design description or Figma frame
-2. **image-prompt-generator** — Write high-quality image generation prompts for UI/UX contexts
-3. **ux-research-helper** — Structure research plans, interview scripts, and synthesis docs
-4. **screen-validator** — Checklist-based validation for each screen (states, edge cases, copy, responsiveness)
-5. **document-drafter** — Draft design briefs, handoff docs, or stakeholder links from bullet points
-6. **design-system-builder** — Help scaffold and maintain Fast-8's design system
+1. **image-prompt-generator** — Write high-quality image generation prompts for UI/UX contexts
+2. **ux-research-helper** — Structure research plans, interview scripts, and synthesis docs
+3. **document-drafter** — Draft design briefs, handoff docs, or stakeholder links from bullet points
 
-To build a skill: describe a recurring workflow and say "let's build a skill for this."
+To build a skill: run `/skill-creator` or describe a recurring workflow and say "let's build a skill for this."
 
 ---
 
@@ -61,11 +75,13 @@ Format: `[YYYY-MM-DD] DECISION: ... | REASONING: ... | CONTEXT: ...`
 ---
 
 ## Memory 🧠
-Claude Code maintains persistent memory across conversations. As we work together, it automatically saves preferences, patterns, and learnings.
+Continuity across conversations comes from the context files, decision log, and skill files in this repo — not from automatic cross-session memory.
 
-- You don't need to configure this — it works out of the box
-- To save something permanently: say "remember that I always want X"
-- Memory + context files + decision log = assistant gets smarter over time without re-explaining things
+- **context/** — who Javier is, what the business is, current priorities, goals
+- **decisions/log.md** — a permanent record of key calls made
+- **skills/** — operational procedures that stay consistent across sessions
+- To make something persistent: write it into the appropriate context file or log it in `decisions/log.md`
+- Memory files (auto-saved by the assistant) supplement this but are not the primary source of continuity
 
 ---
 
@@ -79,8 +95,9 @@ Claude Code maintains persistent memory across conversations. As we work togethe
 ---
 
 ## Projects
-Active workstreams live in `projects/`. Each project has its own folder with a `README.md`.
-Currently empty — add a project when a new initiative kicks off.
+Active workstreams live in `projects/`. Each project has its own file with location, stack, and git notes.
+
+@projects/payuung-prototype.md
 
 ## Templates
 Reusable doc templates live in `templates/`. Start with `templates/session-summary.md`.
